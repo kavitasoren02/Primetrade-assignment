@@ -5,6 +5,12 @@ import cors from "cors"
 import cookieParser from "cookie-parser"
 import dotenv from "dotenv"
 
+// Routes
+import authRoutes from "./routes/auth.routes"
+import notesRoutes from "./routes/notes.routes"
+
+
+
 dotenv.config()
 ConnectToMongo()
 
@@ -22,10 +28,6 @@ app.use(
     }),
 )
 
-// Routes
-import authRoutes from "./routes/auth.routes"
-import notesRoutes from "./routes/notes.routes"
-import { ConnectToMongo } from "./config/connectToMongo"
 
 app.use("/api/auth", authRoutes)
 app.use("/api/notes", notesRoutes)
