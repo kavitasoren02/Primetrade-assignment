@@ -1,5 +1,6 @@
 import express, { type Request, type Response } from "express"
 import mongoose from "mongoose"
+import { ConnectToMongo } from "./config/connectToMongo"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import dotenv from "dotenv"
